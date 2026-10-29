@@ -731,12 +731,8 @@
                     addLog(`Auslage-Karte hinzugefügt: ${airport.name}.`);
                     if (auslage.length === 4) {
                         addLog('Alle 4 Auslage-Karten gescannt.');
-                        updateScanProgress();
-                        // Kurz warten, damit 4/4 sichtbar ist
-                        setTimeout(() => {
-                            stopScan();
-                            showFlightSelection();
-                        }, 400);
+                        stopScan();
+                        showFlightSelection();
                         return;
                     }
                 }
